@@ -1,6 +1,4 @@
 package com.us.onlinecompilr;
-
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -41,12 +39,12 @@ THE SOFTWARE.
  */
 
 public class DirectoryPicker extends ListActivity {
-	
+
 
 	@Override
 	public void onBackPressed() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public static final String START_DIR = "startDir";
@@ -57,7 +55,7 @@ public class DirectoryPicker extends ListActivity {
 	private File dir;
 	private boolean showHidden = false;
 	private boolean onlyDirs = true ;
-	
+
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,9 +70,9 @@ public class DirectoryPicker extends ListActivity {
             	if(startDir.isDirectory()) {
             		dir = startDir;
             	}
-            } 
+            }
         }
-        
+
         setContentView(R.layout.chooser_list);
         setTitle(dir.getAbsolutePath());
         Button btnChoose = (Button) findViewById(R.id.btnChoose);
@@ -87,10 +85,10 @@ public class DirectoryPicker extends ListActivity {
             	returnDir(dir.getAbsolutePath());
             }
         });
-        
+
         ListView lv = getListView();
         lv.setTextFilterEnabled(true);
-        
+
         if(!dir.canRead()) {
         	Context context = getApplicationContext();
         	String msg = "Could not read folder contents.";
@@ -98,11 +96,11 @@ public class DirectoryPicker extends ListActivity {
         	toast.show();
         	return;
         }
-        
+
         final ArrayList<File> files = filter(dir.listFiles(), onlyDirs, showHidden);
         String[] names = names(files);
-        setListAdapter(new ArrayAdapter<String>(this, R.layout.list_item, names));        	
-        
+        setListAdapter(new ArrayAdapter<String>(this, R.layout.list_item, names));
+
 
         lv.setOnItemClickListener(new OnItemClickListener() {
         	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -117,7 +115,7 @@ public class DirectoryPicker extends ListActivity {
         	}
         });
     }
-	
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     	if(requestCode == PICK_DIRECTORY && resultCode == RESULT_OK) {
@@ -126,12 +124,12 @@ public class DirectoryPicker extends ListActivity {
 	        returnDir(path);
     	}
     }
-	
+
     private void returnDir(String path) {
     	Intent result = new Intent();
     	result.putExtra(CHOSEN_DIRECTORY, path);
         setResult(RESULT_OK, result);
-    	finish();    	
+    	finish();
     }
 
 	public ArrayList<File> filter(File[] file_list, boolean onlyDirs, boolean showHidden) {
@@ -146,7 +144,7 @@ public class DirectoryPicker extends ListActivity {
 		Collections.sort(files);
 		return files;
 	}
-	
+
 	public String[] names(ArrayList<File> files) {
 		String[] names = new String[files.size()];
 		int i = 0;
