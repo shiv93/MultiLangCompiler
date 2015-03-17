@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.us.onlinecompilr"
+    android:versionCode="3"
+    android:versionName="1.2" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true" 
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:logo="@drawable/ic_launcher1"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.us.onlinecompilr.MainActivity"
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustResize" >
+            
+        </activity>
+        <activity
+            android:name="com.us.onlinecompilr.Splash"
+            android:configChanges="orientation|screenSize"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.us.onlinecompilr.AndroidHTTPRequestsActivity"
+            android:configChanges="orientation|screenSize"
+            android:logo="@drawable/ic_launcher1" >
+        </activity>
+        <activity
+            android:name="com.us.onlinecompilr.Menu_detail_fragment"
+            android:configChanges="orientation|screenSize"
+            android:logo="@drawable/ic_launcher1" >
+        </activity>
+        <activity android:name="com.us.onlinecompilr.DirectoryPicker" >
+        </activity>
+        <activity
+            android:name="com.us.onlinecompilr.About_us"
+             >
+        </activity>
+    </application>
+
+</manifest>

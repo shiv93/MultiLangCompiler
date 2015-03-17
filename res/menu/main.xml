@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<!--     Open -->
+	<item android:id="@+id/action_open"
+          android:icon="@drawable/ic_action_open"
+          android:title="@string/action_open" 
+          android:showAsAction="always" />
+    <!-- Save -->
+    <item android:id="@+id/action_save"
+          android:icon="@drawable/ic_action_save"
+          android:title="@string/action_save" 
+          android:showAsAction="always" />
+    <!-- Search Widget -->
+<!--     <item android:id="@+id/action_search" -->
+<!--           android:icon="@drawable/ic_action_search" -->
+<!--           android:title="@string/action_search" -->
+<!--           android:showAsAction="always" -->
+<!--           android:actionViewClass="android.widget.SearchView"/> -->
+    
+    
+    <!-- Refresh -->
+    <item android:id="@+id/action_refresh"
+          android:icon="@drawable/ic_action_refresh"
+          android:title="@string/action_refresh" 
+          android:showAsAction="collapseActionView" />
+    
+ 
+</menu>

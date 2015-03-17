@@ -1,0 +1,154 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rel1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".AndroidHTTPRequestsActivity" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent" >
+    <RelativeLayout
+
+
+    style="@style/GenericProgressBackground"
+    android:id="@+id/loadingPanel"
+    >
+    <ProgressBar
+    style="@style/GenericProgressIndicator"/>
+    </RelativeLayout>
+
+    <TableLayout
+        android:id="@+id/tlayout"
+        android:visibility="invisible"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:weightSum="100"
+        android:background="#000000"
+         >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_weight="20"
+            
+             >
+
+            <TextView
+                android:id="@+id/textstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STATUS:-"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/editstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10" 
+                android:layout_marginLeft="20dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="18sp"           
+                  >
+
+                <requestFocus />
+            </TextView>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_weight="20" >
+
+            <TextView
+                android:id="@+id/texttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TIME:-"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/edittime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10" 
+                android:layout_marginLeft="20dp"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                 >
+                
+            </TextView>
+            
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_weight="20" >
+            
+            <TextView
+                android:id="@+id/textmemory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MEMORY:-"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/editmemory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginLeft="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_weight="20" >
+            
+            <TextView
+                android:id="@+id/textoutput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OUTPUT:-"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/editoutput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginLeft="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>
+</ScrollView>
