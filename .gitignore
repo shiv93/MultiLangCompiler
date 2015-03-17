@@ -1,0 +1,4 @@
+#ignore .txt files
+*.txt
+#ignore all assets directory
+assets/
