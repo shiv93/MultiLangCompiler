@@ -1,1 +1,6 @@
+#ignores all .txt files inside assets directory
 assets/*.txt
+
+
+# it will ignore all directories of name assets
+assets/
